@@ -1,0 +1,35 @@
+name: ci
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Build synthetic data
+        run: |
+          python data/build_vocabulary.py
+          python data/generate_source.py
+
+      - name: Run OMOP ETL (dbt-duckdb)
+        run: mkdir -p outputs && cd dbt && dbt run --profiles-dir .
+
+      - name: Run mapping pipeline
+        run: python scripts/run_mapping.py
+
+      - name: Run tests
+        run: python -m pytest -q
