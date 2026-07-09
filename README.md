@@ -1,4 +1,4 @@
-# Health-Code-Matter
+# Health-Code-Mapper
 
 **Uncertainty-calibrated mapping of source clinical codes to standard OMOP (SNOMED) concepts.**
 
