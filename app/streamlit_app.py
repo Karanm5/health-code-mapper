@@ -61,8 +61,8 @@ def build_mapper(standards, standard_names, src_terms):
 
 
 def main():
-    st.set_page_config(page_title="Concordance", layout="wide")
-    st.title("Concordance")
+    st.set_page_config(page_title="Health-Code-Mapper", layout="wide")
+    st.title("Health-Code-Mapper")
     st.caption("Uncertainty-calibrated mapping of source clinical codes to "
                "standard OMOP (SNOMED) concepts. Synthetic data.")
 
