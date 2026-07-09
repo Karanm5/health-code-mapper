@@ -1,0 +1,21 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+*.egg-info/
+
+# dbt
+dbt/target/
+dbt/dbt_packages/
+dbt/logs/
+
+# Generated artefacts (reproducible via `make all`)
+outputs/*.duckdb
+data/source/
+# note: data/vocab/ IS committed — it is a small curated asset the app needs
+
+# OS / editor
+.DS_Store
+.idea/
+.vscode/
