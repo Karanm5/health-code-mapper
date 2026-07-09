@@ -1,0 +1,49 @@
+{
+  "n_source_codes": 60,
+  "n_standard_candidates": 30,
+  "single_split": {
+    "alpha": 0.1,
+    "n_test": 30,
+    "empirical_coverage": 0.9,
+    "avg_set_size": 0.967,
+    "auto_accept_rate": 0.9,
+    "auto_accept_accuracy": 0.963,
+    "review_rate": 0.0333,
+    "no_match_rate": 0.0667,
+    "naive_top1_accuracy": 0.9
+  },
+  "coverage_curve": [
+    {
+      "alpha": 0.2,
+      "target_coverage": 0.8,
+      "mean_empirical_coverage": 0.8289,
+      "std_empirical_coverage": 0.0987,
+      "mean_avg_set_size": 0.838,
+      "n_repeats": 300
+    },
+    {
+      "alpha": 0.15,
+      "target_coverage": 0.85,
+      "mean_empirical_coverage": 0.9099,
+      "std_empirical_coverage": 0.0713,
+      "mean_avg_set_size": 0.946,
+      "n_repeats": 300
+    },
+    {
+      "alpha": 0.1,
+      "target_coverage": 0.9,
+      "mean_empirical_coverage": 0.9409,
+      "std_empirical_coverage": 0.0559,
+      "mean_avg_set_size": 1.031,
+      "n_repeats": 300
+    },
+    {
+      "alpha": 0.05,
+      "target_coverage": 0.95,
+      "mean_empirical_coverage": 0.9726,
+      "std_empirical_coverage": 0.0391,
+      "mean_avg_set_size": 1.156,
+      "n_repeats": 300
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+source_vocabulary,source_code,source_term,proposed_standard,confidence,set_size,decision,correct
+Read,N05,Osteoarthritis,Osteoarthritis,0.999,1,AUTO_ACCEPT,True
+Read,C10E,Type 1 diabetes mellitus,Type 1 diabetes mellitus,0.733,1,AUTO_ACCEPT,True
+ICD10CM,F03,Unspecified dementia,Dementia,0.977,1,AUTO_ACCEPT,True
+ICD10CM,E03,Other hypothyroidism,Hypothyroidism,0.999,1,AUTO_ACCEPT,True
+Read,H33,Asthma,Asthma,1.000,1,AUTO_ACCEPT,True
+Read,F25,Epilepsy,Epilepsy,1.000,1,AUTO_ACCEPT,True
+Read,C04,Hypothyroidism,Hypothyroidism,1.000,1,AUTO_ACCEPT,True
+Read,H2,Pneumonia,Pneumonia,1.000,1,AUTO_ACCEPT,True
+ICD10CM,I63,Cerebral infarction,Myocardial infarction,0.909,1,AUTO_ACCEPT,False
+Read,N330,Osteoporosis,Osteoporosis,1.000,1,AUTO_ACCEPT,True
+ICD10CM,G43,Migraine,Migraine,1.000,1,AUTO_ACCEPT,True
+ICD10CM,D64,Other anaemias,Anemia,0.437,0,NO_MATCH,False
+ICD10CM,I48,Atrial fibrillation and flutter,Atrial fibrillation,0.997,1,AUTO_ACCEPT,True
+Read,G30,Acute myocardial infarction,Myocardial infarction,0.999,1,AUTO_ACCEPT,True
+Read,B22,Malignant neoplasm of bronchus/lung,Malignant tumor of breast,0.380,0,NO_MATCH,False
+ICD10CM,C50,Malignant neoplasm of breast,Malignant tumor of breast,0.958,1,AUTO_ACCEPT,True
+Read,H3,Chronic obstructive pulmonary disease,Chronic obstructive pulmonary disease,0.998,1,AUTO_ACCEPT,True
+Read,N040,Rheumatoid arthritis,Rheumatoid arthritis,0.999,1,AUTO_ACCEPT,True
+ICD10CM,G40,Epilepsy,Epilepsy,1.000,1,AUTO_ACCEPT,True
+ICD10CM,K76,Other diseases of liver,Chronic liver disease,0.925,1,AUTO_ACCEPT,True
+Read,E2B,Depressive disorder,Depressive disorder,0.999,1,AUTO_ACCEPT,True
+Read,E200,Anxiety states,Anxiety disorder,0.943,1,AUTO_ACCEPT,True
+Read,G20,Essential hypertension,Essential hypertension,1.000,1,AUTO_ACCEPT,True
+Read,E00,Dementia,Dementia,1.000,1,AUTO_ACCEPT,True
+ICD10CM,E10,Insulin-dependent diabetes mellitus,Type 2 diabetes mellitus,0.485,2,REVIEW,True
+Read,B34,Malignant neoplasm of breast,Malignant tumor of breast,0.958,1,AUTO_ACCEPT,True
+ICD10CM,C18,Malignant neoplasm of colon,Malignant tumor of colon,0.952,1,AUTO_ACCEPT,True
+Read,1Z1,Chronic kidney disease,Chronic kidney disease,0.992,1,AUTO_ACCEPT,True
+Read,F12,Parkinson's disease,Parkinson's disease,1.000,1,AUTO_ACCEPT,True
+Read,G58,Heart failure,Heart failure,1.000,1,AUTO_ACCEPT,True
