@@ -2,12 +2,10 @@
 
 **Uncertainty-calibrated mapping of source clinical codes to standard OMOP (SNOMED) concepts.**
 
-![ci](https://github.com/OWNER/concordance/actions/workflows/ci.yml/badge.svg)
+![ci](https://github.com/Karanm5/health-code-mapper/actions/workflows/ci.yml/badge.svg)
 
-Concordance takes clinical codes as they arrive in linked health records — ICD-10
-from hospital data, Read v2 from primary care — standardises them into an OMOP
-Common Data Model, and attaches a **calibrated confidence** and a **conformal
-triage decision** to every proposed mapping. Instead of silently auto-accepting a
+Concordance takes clinical codes as they arrive in linked health records, ICD-10 from hospital data, Read v2 from primary care — standardises them into an OMOP
+Common Data Model, and attaches a **calibrated confidence** and a **conformal triage decision** to every proposed mapping. Instead of silently auto-accepting a
 best-guess match (the usual failure mode) or sending every code to a human, it
 routes only the genuinely ambiguous codes to review, with a distribution-free
 guarantee on how often the correct concept is retained.
@@ -55,12 +53,12 @@ flowchart TD
     D --> F["Streamlit demo<br/>confidence + triage, live α"]
 ```
 
-- **ETL** — `dbt-duckdb` models transform linked source tables into an OMOP CDM,
+- **ETL** - `dbt-duckdb` models transform linked source tables into an OMOP CDM,
   standardising ICD-10 and Read codes via the vocabulary's `Maps to` relationships.
-- **Mapping** — `src/concordance/` fits a character n-gram TF-IDF similarity model,
+- **Mapping** - `src/concordance/` fits a character n-gram TF-IDF similarity model,
   turns similarities into probabilities, calibrates a conformal threshold, and
   triages each code.
-- **Demo** — a Streamlit app with a live α slider showing the coverage / effort
+- **Demo** - a Streamlit app with a live α slider showing the coverage / effort
   tradeoff.
 
 ## Results (synthetic vocabulary, 60 source codes → 30 standard concepts)
@@ -76,7 +74,7 @@ target and stays at or above the 1 − α guarantee:
 | 0.05 | 95% | 97.3% | 1.16 |
 
 At α = 0.10 on a held-out split: a naive "auto-accept top-1" strategy reaches
-**90%** accuracy — meaning ~10% of codes enter the CDM as *silent* errors. With
+**90%** accuracy - meaning ~10% of codes enter the CDM as *silent* errors. With
 conformal triage, ~**90%** of codes are auto-accepted at **96%** accuracy, and the
 remaining codes are surfaced for review or flagged as no-match rather than
 mismapped silently.
