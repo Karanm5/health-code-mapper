@@ -1,0 +1,7 @@
+concordance_omop:
+  target: dev
+  outputs:
+    dev:
+      type: duckdb
+      path: "../outputs/omop.duckdb"
+      threads: 4

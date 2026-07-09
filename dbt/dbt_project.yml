@@ -1,0 +1,22 @@
+name: concordance_omop
+version: "0.1.0"
+config-version: 2
+
+profile: concordance_omop
+
+model-paths: ["models"]
+
+vars:
+  # Paths are resolved relative to the dbt working directory (the dbt/ folder).
+  source_dir: "../data/source"
+  vocab_dir: "../data/vocab"
+
+models:
+  concordance_omop:
+    staging:
+      # Materialized as tables (not views) so the external CSVs are read once at
+      # build time and the resulting DuckDB file is fully self-contained and
+      # queryable from any working directory.
+      +materialized: table
+    omop:
+      +materialized: table
